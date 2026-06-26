@@ -1,0 +1,19 @@
+name: 'AI Text Generation'
+on: workflow_dispatch # Allows manual trigger
+
+jobs:
+  inference:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      models: read # Required to access GitHub Models catalog
+    steps:
+      - name: Call AI Model
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          model: 'gpt-4o' # Specify your preferred model
+          prompt: 'Summarize the purpose of a CI/CD pipeline in two sentences.'
+
+      - name: Print Output
+        run: echo "${{ steps.inference.outputs.response }}"
