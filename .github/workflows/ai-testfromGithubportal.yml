@@ -22,7 +22,7 @@ jobs:
         uses: actions/ai-inference@v1
         with:
           model: 'gpt-4o' # Specify your preferred model
-          prompt: ' show lei GITHUB_JOB.'
+          prompt: ' show me java version on agent.'
 
       - name: Print Output
         run: echo "${{ steps.inference.outputs.response }}"
