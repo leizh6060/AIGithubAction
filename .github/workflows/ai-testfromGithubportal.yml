@@ -22,7 +22,7 @@ jobs:
         uses: actions/ai-inference@v1
         with:
           model: 'gpt-4o' # Specify your preferred model
-          prompt: ' show me java version on agent.'
+          prompt: ' show me steps to compile java project with maven in github action workflow.'
 
       - name: Print Output
         run: echo "${{ steps.inference.outputs.response }}"
