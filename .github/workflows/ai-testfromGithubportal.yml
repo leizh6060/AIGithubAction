@@ -13,7 +13,7 @@ jobs:
         uses: actions/ai-inference@v1
         with:
           model: 'gpt-4o' # Specify your preferred model
-          prompt: ' show leiGITHUB_JOB.'
+          prompt: ' show lei GITHUB_JOB.'
 
       - name: Print Output
         run: echo "${{ steps.inference.outputs.response }}"
