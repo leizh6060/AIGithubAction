@@ -8,6 +8,15 @@ jobs:
       contents: read
       models: read # Required to access GitHub Models catalog
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "21"
+      - name: Print Java version
+        run: java --version    
       - name: Call AI Model
         id: inference
         uses: actions/ai-inference@v1
