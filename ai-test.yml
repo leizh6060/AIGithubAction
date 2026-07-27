@@ -13,7 +13,7 @@ jobs:
         uses: actions/ai-inference@v1
         with:
           model: 'gpt-4o' # Specify your preferred model
-          prompt: 'Summarize the purpose of a CI/CD pipeline in two sentences.'
+          prompt: 'why use github action.'
 
       - name: Print Output
         run: echo "${{ steps.inference.outputs.response }}"
