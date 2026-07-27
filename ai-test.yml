@@ -13,7 +13,7 @@ jobs:
         uses: actions/ai-inference@v1
         with:
           model: 'gpt-4o' # Specify your preferred model
-          prompt: 'github action build-in parameter for this workflow.'
+          prompt: 'show me github action log file location.'
 
       - name: Print Output
         run: echo "${{ steps.inference.outputs.response }}"
